@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true" verbose="true">
+
+    <php>
+        <!-- Symfony en modo test -->
+        <env name="KERNEL_CLASS" value="App\Kernel" />
+        <env name="APP_ENV" value="test" />
+        <env name="APP_DEBUG" value="1" />
+
+        <!-- Base de datos de test (CORREGIDO) -->
+        <env name="DATABASE_URL" value="postgresql://core:core@db:5432/core_test?serverVersion=16&amp;charset=utf8" />
+
+        <!-- Variables necesarias -->
+        <env name="DEFAULT_URI" value="http://localhost" />
+        <env name="CORS_ALLOW_ORIGIN" value="*" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>

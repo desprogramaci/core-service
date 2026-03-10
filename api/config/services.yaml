@@ -1,0 +1,18 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\State\PrestamoProcessor:
+    arguments:
+      $persistProcessor: '@api_platform.doctrine.orm.state.persist_processor'
+      $limitador: '@App\Domain\LimitadorPrestamos'
+
+  App\State\PrestamosPorUsuarioProvider: ~
+
+  App\:
+    resource: '../src/'
+    exclude:
+      - '../src/DependencyInjection/'
+      - '../src/Entity/'
+      - '../src/Kernel.php'
