@@ -2,7 +2,7 @@
 API REST para la administración de usuarios, libros y préstamos dentro de una biblioteca.
 Desarrollada con Symfony 6, API Platform, Doctrine ORM y PostgreSQL, ejecutándose completamente en Docker.
 
-🚀 Funcionalidad
+🚀 Funcionalidad:
 La API permite gestionar:
 
 👤 Usuarios
